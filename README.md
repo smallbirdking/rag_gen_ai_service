@@ -203,7 +203,7 @@ For production, move cache and metrics to Redis/Prometheus and run a load test s
 
 ## 8. Cost Estimate
 
-See `docs/cost_model.md`. The config defaults to `gpt-5.4-mini` for generation and `gpt-5.4-nano` for lower-cost evaluation. Retrieval/reranking are local and do not add per-token vendor cost in this implementation.
+See `docs/cost_model.md`. The config defaults to `gpt-5.4-mini` for generation and `gpt-5.4-nano` for lower-cost evaluation. That document includes the explicit model-version selection rationale, including quality, cost, and latency trade-offs. Retrieval/reranking are local and do not add per-token vendor cost in this implementation.
 
 ## 9. Repository Layout
 
