@@ -1,0 +1,44 @@
+app:
+  name: rag-generative-ai-service
+  environment: load-test-openai
+  log_path: logs/app.jsonl
+  cache_ttl_seconds: 0
+  default_language: auto
+
+corpus:
+  path: data/corpus
+  chunk_size_chars: 850
+  chunk_overlap_chars: 120
+
+retrieval:
+  mode: hybrid
+  top_k: 5
+  min_confidence: 0.18
+  hybrid_alpha: 0.62
+  reranker_enabled: true
+  reranker_top_k: 4
+
+llm:
+  provider: openai
+  model: gpt-5.4-mini
+  evaluator_model: gpt-5.4-nano
+  temperature: 0.1
+  max_output_tokens: 600
+  input_usd_per_1m_tokens: 0.75
+  cached_input_usd_per_1m_tokens: 0.075
+  output_usd_per_1m_tokens: 4.50
+
+safety:
+  refusal_message_cn: "抱歉，我无法仅根据当前知识库可靠回答这个问题。建议你补充相关内部文档，或联系对应制度/技术负责人确认。"
+  refusal_message_en: "Sorry, I cannot answer this reliably from the retrieved internal knowledge base. Please add the relevant internal document or confirm with the responsible owner."
+  enable_pii_redaction: true
+  enable_prompt_injection_filter: true
+
+metrics:
+  target_p90_latency_seconds: 10
+  target_concurrency_single_instance: 5
+  target_faithfulness: 0.85
+  target_context_precision: 0.70
+  target_answer_compliance: 0.90
+  target_style_consistency: 0.85
+  target_refusal_appropriateness: 0.90

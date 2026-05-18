@@ -1,0 +1,4 @@
+cases,faithfulness,context_precision,answer_compliance,style_consistency,refusal_appropriateness,refusal_rate,p50_latency_ms,p90_latency_ms,p95_latency_ms,total_input_tokens,total_output_tokens,judge_input_tokens,judge_output_tokens,cache_hit_rate,config
+8,1.0,1.0,1.0,0.9625,1.0,0.25,2629.0,2776.0,4508.0,1723,341,4838,810,0.0,vector-only
+8,1.0,1.0,1.0,0.9375,1.0,0.25,2455.0,2775.0,3068.0,1723,358,4855,812,0.0,hybrid
+8,1.0,1.0,1.0,0.9125,1.0,0.25,2444.0,2765.0,2769.0,1723,333,4830,816,0.0,hybrid+rerank

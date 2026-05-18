@@ -1,0 +1,2 @@
+[OCR extracted text from scanned PDF]
+All vendor contracts containing customer personal data must be reviewed by Compliance before signature. If OCR confidence is low or the scanned document contains unreadable pages, the system should mark the source as OCR_LOW_CONFIDENCE and avoid using it as the sole basis for high-risk answers.

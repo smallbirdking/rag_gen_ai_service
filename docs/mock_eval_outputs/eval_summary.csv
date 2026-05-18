@@ -1,0 +1,4 @@
+cases,faithfulness,context_precision,answer_compliance,style_consistency,refusal_appropriateness,refusal_rate,p50_latency_ms,p90_latency_ms,p95_latency_ms,total_input_tokens,total_output_tokens,cache_hit_rate,config
+8,0.8674,1.0,1.0,1.0,1.0,0.25,1.0,8.0,9.0,1791,625,0.0,vector-only
+8,0.8674,1.0,1.0,1.0,1.0,0.25,1.0,1.0,3.0,1791,625,0.0,hybrid
+8,0.8674,1.0,1.0,1.0,1.0,0.25,1.0,3.0,3.0,1791,625,0.0,hybrid+rerank

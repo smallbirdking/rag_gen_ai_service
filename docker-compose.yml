@@ -1,0 +1,10 @@
+services:
+  rag-service:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - RAG_CONFIG_PATH=config/app.yaml
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    volumes:
+      - ./logs:/app/logs

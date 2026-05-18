@@ -1,0 +1,9 @@
+[project]
+name = "rag-generative-ai-service"
+version = "0.1.0"
+description = "Configurable bilingual RAG QA + generative service case-study implementation"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
